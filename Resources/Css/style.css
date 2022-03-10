@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    background-color: #222222;
+}
+
+/*General Rules*/
+.standardfont {
+    font-family: 'Poppins', sans-serif;
+}
+
+.letterspace {
+    letter-spacing: 0.1rem;
+}
+
+.largeletterspace {
+    letter-spacing: 0.15rem;
+}
+
+.wordmargin {
+    margin: 0 0.25rem;
+}
+
+.whitefont {
+    color: white; 
+}
+
+.grayfont {
+    color: gray
+}
+
+.opacity {
+    opacity: 0.55;
+}
+
+.xsmall {
+    font-size: 0.5rem;
+}
+
+.small {
+    font-size: 0.75rem;
+}
+
+.normal {
+    font-size: 1rem;
+}
+
+.medium {
+    font-size: 1.25rem;
+}
+
+.large {
+    font-size: 2rem;
+}
+
+.xlarge {
+    font-size: 2.5rem;
+}
+
+.standard {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.transparentback {
+    background-color: transparent;
+}
+
+.darkgrayback {
+    background-color: #222222;
+}
+
+.lightgrayback {
+    background-color: #333333;
+}
+
+.highlightback {
+    background-color: #ca004e;
+}
+
+.highlightback {
+    background-color: #ca004e;
+}
+
+.darkgrayborder {
+    border-color: #222222;
+}
+
+.lightgrayborder {
+    border-color: #333333;
+}
+
+.xlightgrayborder {
+    border-color: #444444;
+}
+
+.highlightborder {
+    border-color: #ca004e;
+}
+
+/*Header*/
+.headerhamburger {
+    display: none;
+}
+
+header {
+    height: 6rem;
+    width: 80%;
+    margin: auto;
+}
+
+.headercontainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerleft {
+    display: flex;
+    align-items: center;
+}
+
+.letterround {
+    border-radius: 100px;
+    padding: 0.25rem 1.25rem;
+    margin: 0 0.5rem;
+}
+
+.headerfreespace {
+    height: 100%;
+    min-width: 50px;
+    flex: 1;
+}
+
+.headernavlist {
+    display: flex;
+}
+
+.headernavlist li {
+    margin-right: 2rem;
+    display: inline-flex;
+}
+
+.headernavlist a {
+    text-decoration: none;
+}
+
+.headernavlist a:hover{
+    color: #ca004e;
+    transition: color 1s;
+}
+
+.headernavlist a:active{
+    font-weight: 800;
+    transition: color 0.5s;
+}
+
+/*About Me*/
+
+.aboutMe {
+    height: 35rem;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.aboutcontainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.aboutpicture {
+    min-width: 30rem;
+    height: 85%;
+    margin: 0 5rem;
+    border-style: solid;
+    border-width: 1rem;
+    box-shadow: 0px 0px 20px #333333;
+    opacity: 0.7;
+    background-image: url("../images/avatar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imageround {
+    border-radius: 500px;
+}
+
+.aboutpicture:hover{
+    border-color: #ca004e;
+    opacity: 1;
+    transition: border-color 2s, opacity 1s;
+}
+
+.aboutcontent {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentmargin {
+    margin: 0.15rem 0;
+}
+
+.rotate::before{
+    content: '';
+    animation: animate 8s infinite;
+}
+@keyframes animate {
+    0%{
+        content: 'Industrial automation';
+    }
+    33%
+    {
+        content: 'Embedded';
+    }
+    66%
+    {
+        content: 'Iot';
+    }
+    100%
+    {
+        content: 'Web';
+    }
+}
+
+.buttons {
+    width: 100%;
+    height: 5rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    padding: 0.75rem 2rem;
+    border-style: solid;
+    border-width: 0.15rem;
+    border-radius: 100px;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    opacity: 0.7;
+    box-shadow: 0px 0px 5px #333333;
+}
+
+.buttons a:hover {
+    background-color: #ca004e;
+    opacity: 1;
+    transition: opacity 0.5s, background-color 0.8s;
+}
+
+.buttons a:active {
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px #ca004e;
+    transition: opacity 0.5s, box-shadow 0.5s;
+}
