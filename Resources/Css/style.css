@@ -105,6 +105,16 @@ html {
     border-color: #ca004e;
 }
 
+.link {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.link:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
 /*Header*/
 .headerhamburger {
     display: none;
@@ -278,7 +288,7 @@ header {
 }
 
 .education {
-    margin: 0 2rem;
+    margin-right: 2rem;
     height: 100%;
     width: 50%;
     min-width: 300px;
@@ -300,7 +310,7 @@ header {
 }
 
 .skills {
-    margin: 0 2rem;
+    margin-left: 2rem;
     height: 100%;
     width: 50%;
     min-width: 300px;
@@ -345,4 +355,122 @@ header {
 
 .hundred{
     width: 100%; 
+}
+
+/*experience*/
+.experiencecontainer {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.experienceinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.expbox {
+    width: 250px;
+    height: 300px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*portfolio*/
+.portfoliocontainer {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.portfolioinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mediabox {
+    width: 300px;
+    height: 225px;
+    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.embed {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+/*contacts*/
+.contactscontainer {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.contactsinner {
+    width: 100%;
+    height: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*footer*/
+footer {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.footercontainer {
+    height: 100%;
+    width: 100%;
+}
+
+.footerinner {
+    margin: 0.5rem auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footerleft {
+    display: flex;
+    align-items: center;
+}
+
+.footerfreespace {
+    height: 100%;
+    min-width: 50px;
+    flex: 1;
+}
+
+.footernavlist {
+    display: flex;
+}
+
+.footernavlist li {
+    margin-right: 2rem;
+    display: inline-flex;
+}
+
+.footernavlist a {
+    text-decoration: none;
+}
+
+.footernavlist a:hover{
+    color: #ca004e;
+    transition: color 1s;
+}
+
+.footernavlist a:active{
+    font-weight: 800;
+    transition: color 0.5s;
 }
