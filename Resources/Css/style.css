@@ -120,6 +120,10 @@ html {
     transition: opacity 0.5s;
 }
 
+.line {
+    height: 0.25rem;
+}
+
 /*Header*/
 
 header {
@@ -200,7 +204,7 @@ header {
         top: 7rem;
         height: 300px;
         width: 20%;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items:flex-start;
         transform: translateX(100%);
@@ -218,6 +222,7 @@ header {
 }
 
 .slide-active {
+    display: flex;
     transform: translateX(0%);
 }
 
@@ -282,7 +287,6 @@ header {
     width: 50%;
     min-width: 250px;
     height: 100%;
-    margin: 0 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -371,7 +375,6 @@ header {
 
     .aboutcontent {
         width: 100%;
-        min-width: 250px;
         height: 100%;
         margin: 2rem auto;
         display: flex;
@@ -405,15 +408,10 @@ header {
     margin-right: 2rem;
     height: 100%;
     width: 50%;
-    min-width: 300px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.line {
-    height: 0.25rem;
-    width: 100%;
 }
 
 .edubox {
@@ -427,7 +425,7 @@ header {
     margin-left: 2rem;
     height: 100%;
     width: 50%;
-    min-width: 300px;
+    min-width: 350px;
     display: flex;
     flex-direction: column; 
     justify-content: space-around;
@@ -440,35 +438,81 @@ header {
     flex-direction: column;
 }
 
-.baseline {
-    height: 0.25rem;
-    width: 100%;
+@keyframes width100 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }
 
-.skillline {
-    height: 0.25rem;
-    position: relative;
-    top: -0.25rem
+@keyframes width90 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
 }
 
-.sixty{
-    width: 60%; 
+@keyframes width80 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
 }
 
-.seventy{
-    width: 70%; 
+@keyframes width70 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
 }
 
-.eighty{
-    width: 80%; 
+@keyframes width60 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 60%;
+    }
 }
 
-.ninety{
-    width: 90%; 
+@keyframes width50 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
 }
 
-.hundred{
-    width: 100%; 
+@media screen and (max-width:1200px) {
+    
+    .eduskills {
+        margin: auto;
+    }
+
+    .eduskillscontainer {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .education {
+        width: 100%;
+        margin: 4rem auto;
+    }
+
+    .skills {
+        width: 100%;
+        margin: 4rem auto;
+    }
+
 }
 
 /*experience*/
@@ -493,6 +537,20 @@ header {
     flex-direction: column;
 }
 
+@media screen and (max-width:1200px) {
+
+    .experienceinner {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .expbox {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
 /*portfolio*/
 .portfoliocontainer {
     width: 80%;
@@ -504,36 +562,40 @@ header {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .mediabox {
-    width: 300px;
-    height: 225px;
-    margin: 2rem;
+    margin: 1rem auto;
+    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .embed {
-    width: 100%;
-    margin: 1rem auto;
+    width: 100%; 
+    height: auto;
+    overflow: hidden;
 }
 
 /*contacts*/
 .contactscontainer {
     width: 80%;
-    margin: 4rem auto;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contactsinner {
     width: 100%;
     height: 100%;
     margin: 1rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
+}
+
+@media screen and (max-width:1200px) {
+
+    .contactsinner {
+        text-align: center;
+    }
+
 }
 
 /*footer*/
@@ -548,10 +610,10 @@ footer {
 }
 
 .footerinner {
-    margin: 0.5rem auto;
     height: 100%;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -560,19 +622,11 @@ footer {
     align-items: center;
 }
 
-.footerfreespace {
-    height: 100%;
-    min-width: 50px;
-    flex: 1;
-}
-
 .footernavlist {
     display: flex;
-}
-
-.footernavlist li {
-    margin-right: 2rem;
-    display: inline-flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 30%;
 }
 
 .footernavlist a {
@@ -587,4 +641,12 @@ footer {
 .footernavlist a:active{
     font-weight: 800;
     transition: color 0.5s;
+}
+
+@media screen and (max-width:1200px) {
+
+    .footernavlist {
+        width: 50%;
+    }
+
 }
