@@ -185,17 +185,25 @@ header {
         overflow-x: hidden;
     }
 
+    .navcontainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .headernavlist {
         position: absolute;
         right: 0px;
         top: 7rem;
-        height: 250px;
+        height: 300px;
+        width: 210px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 25%;
-        /*transform: translateX(100%);
-        transition: transform 0.5s ease-in;*/
+        align-items:flex-start;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
     }
 
     .burger{
@@ -204,7 +212,7 @@ header {
 
 }
 
-.nav-active {
+.slide-active {
     transform: translateX(0%);
 }
 
@@ -246,7 +254,7 @@ header {
     width: 50%;
     min-width: 250px;
     height: 100%;
-    margin: 0 2rem;
+    margin: 0 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
