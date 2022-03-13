@@ -177,6 +177,7 @@ header {
     width: 25px;
     height: 3px;
     margin: 5px;
+    transition: all 0.5s ease;
 }
 
 @media screen and (max-width:1200px) {
@@ -198,12 +199,16 @@ header {
         right: 0px;
         top: 7rem;
         height: 300px;
-        width: 210px;
+        width: 20%;
         display: flex;
         flex-direction: column;
         align-items:flex-start;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+    }
+
+    .headernavlist li {
+        opacity: 0;
     }
 
     .burger{
@@ -214,6 +219,29 @@ header {
 
 .slide-active {
     transform: translateX(0%);
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translate(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /*About Me*/
