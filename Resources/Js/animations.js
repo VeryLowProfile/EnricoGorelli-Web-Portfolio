@@ -12,9 +12,13 @@ const navSlide = () => {
         //animate links
         navLinks.forEach((navLink, index) => {
             if (navLink.style.animation) {
+
                 navLink.style.animation = '';
+
             } else {
+
                 navLink.style.animation = `slideFade 0.5s ease forwards ${index/7+ 0.2}s`;
+
             }
         });
 
@@ -24,11 +28,51 @@ const navSlide = () => {
     });
 }
 
-const lineAnimation = () => {
+const imageBlur = () => {
 
-    const skillLines = document.querySelectorAll('.line');
+    const image = document.querySelector('.aboutpicture');
+    image.style.animation = `imageBlur 3s ease`
 
-    skillLines.forEach((line) => {
+}
+
+window.addEventListener('scroll', () => {
+
+    console.log("event");
+
+    let reveals = document.querySelectorAll('.reveal');
+    let windowHeight = window.innerHeight;
+
+    reveals.forEach((reveal) => {
+
+        let revealPoint = 150;
+        let revealTop = reveal.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - revealPoint){
+
+            //Add active class to animate
+            reveal.classList.add('active');
+
+            //Line animation
+            let lines = reveal.querySelectorAll('.line')
+            lineAnimation(lines);
+
+        } else {
+
+            //Remove active class to animate
+            reveal.classList.remove('active');
+            
+            //Reset Line animation
+            let lines = reveal.querySelectorAll('.line')
+            resetLineWidth(lines);
+
+        }
+    });   
+});
+
+const lineAnimation = (elementlines) => {
+
+    elementlines.forEach((line) => {
+        console.log("add animation" + line);   
         line.classList.forEach((cl) => {
             if (cl === "width_100"){
                 line.style.width = "100%"
@@ -58,40 +102,15 @@ const lineAnimation = () => {
     });
 }
 
-const imageBlur = () => {
+const resetLineWidth = (elementlines) => {
 
-    const image = document.querySelector('.aboutpicture');
-    image.style.animation = `imageBlur 3s ease`
-
+    elementlines.forEach((line) => {
+        console.log("remove animation" + line);    
+        line.style.width = "0%"
+        line.style.animation = ``;
+    });
 }
 
-window.addEventListener('scroll', () => {
-
-    console.log("event");
-
-    let reveals = document.querySelectorAll('.reveal');
-    let windowHeight = window.innerHeight;
-    console.log(windowHeight);
-
-    reveals.forEach((reveal) => {
-
-        let revealPoint = 150;
-        let revealTop = reveal.getBoundingClientRect().top;
-
-        if (revealTop < windowHeight - revealPoint){
-
-            reveal.classList.add('active');
-
-        } else {
-
-            reveal.classList.remove('active');
-
-        }
-
-    });  
-});
-
 navSlide();
-lineAnimation();
 imageBlur();
 
