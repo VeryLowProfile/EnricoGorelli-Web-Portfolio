@@ -7,6 +7,7 @@
 html {
     font-size: 16px;
     background-color: #222222;
+    -webkit-font-smoothing: antialiased;
 }
 
 /*General Rules*/
