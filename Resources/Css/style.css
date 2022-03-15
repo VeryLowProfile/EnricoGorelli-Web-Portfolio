@@ -124,6 +124,17 @@ html {
     height: 0.25rem;
 }
 
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px); 
+    opacity: 1;
+}
+
 /*Header*/
 
 header {
@@ -327,6 +338,15 @@ header {
     100%
     {
         content: 'Web';
+    }
+}
+
+@keyframes imageBlur {
+    from {
+        filter: blur(8px);
+    }
+    to {
+        filter: blur(0px);
     }
 }
 

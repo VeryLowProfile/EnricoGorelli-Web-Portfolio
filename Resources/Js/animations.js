@@ -58,6 +58,40 @@ const lineAnimation = () => {
     });
 }
 
+const imageBlur = () => {
+
+    const image = document.querySelector('.aboutpicture');
+    image.style.animation = `imageBlur 3s ease`
+
+}
+
+window.addEventListener('scroll', () => {
+
+    console.log("event");
+
+    let reveals = document.querySelectorAll('.reveal');
+    let windowHeight = window.innerHeight;
+    console.log(windowHeight);
+
+    reveals.forEach((reveal) => {
+
+        let revealPoint = 150;
+        let revealTop = reveal.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - revealPoint){
+
+            reveal.classList.add('active');
+
+        } else {
+
+            reveal.classList.remove('active');
+
+        }
+
+    });  
+});
+
 navSlide();
 lineAnimation();
+imageBlur();
 
