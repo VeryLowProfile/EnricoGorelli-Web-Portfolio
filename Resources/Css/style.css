@@ -155,7 +155,7 @@ header {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 60%;
+    width: 65%;
 }
 
 .headernavlist a {
@@ -170,6 +170,17 @@ header {
 .headernavlist a:active{
     font-weight: 800;
     transition: color 0.5s;
+}
+
+.headersocials {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.headersocials a:active{
+    margin-top: 0.125rem;
+    transition: margin-top 0.2s;
 }
 
 .burger{
@@ -213,6 +224,10 @@ header {
 
     .headernavlist li {
         opacity: 0;
+    }
+
+    .headersocials {
+        justify-content: flex-start;
     }
 
     .burger{
@@ -612,6 +627,7 @@ footer {
 .footerinner {
     height: 100%;
     width: 100%;
+    margin: 1rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -622,31 +638,22 @@ footer {
     align-items: center;
 }
 
-.footernavlist {
+.footersocials {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 30%;
+    width: 10%;
 }
 
-.footernavlist a {
-    text-decoration: none;
-}
-
-.footernavlist a:hover{
-    color: #ca004e;
-    transition: color 1s;
-}
-
-.footernavlist a:active{
-    font-weight: 800;
-    transition: color 0.5s;
+.footersocials a:active{
+    margin-top: 0.125rem;
+    transition: margin-top 0.2s;
 }
 
 @media screen and (max-width:1200px) {
 
-    .footernavlist {
-        width: 50%;
+    .footersocials {
+        width: 20%;
     }
 
 }
