@@ -72,7 +72,6 @@ window.addEventListener('scroll', () => {
 const lineAnimation = (elementlines) => {
 
     elementlines.forEach((line) => {
-        console.log("add animation" + line);   
         line.classList.forEach((cl) => {
             if (cl === "width_100"){
                 line.style.width = "100%"
@@ -105,7 +104,6 @@ const lineAnimation = (elementlines) => {
 const resetLineWidth = (elementlines) => {
 
     elementlines.forEach((line) => {
-        console.log("remove animation" + line);    
         line.style.width = "0%"
         line.style.animation = ``;
     });
